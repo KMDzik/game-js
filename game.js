@@ -18,8 +18,14 @@
             context.fillRect(width - boxSize, 0, boxSize, height);
         };
 
-        context.font = "20 Comic Sans MSpx Comic Sans MS";
-        context.fillText("Courier", 50, 50);
+        var drawScore = function () {
+          context.font = "24px Comic Sans MS";
+          context.fillStyle = "red";
+          context.textAlign = "left";
+          context.textBaseline = "top";
+          context.fillText("Wynik: " + wynik, rozmiarBloku, rozmiarBloku);
+        };
+          
 
 
 
