@@ -14,4 +14,3 @@ for (i = 0; i < password.length; i++) {
      return password1 = password1 + "-";
   }
 }
-

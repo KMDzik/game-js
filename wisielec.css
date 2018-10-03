@@ -35,19 +35,13 @@ header {
   background:yellow;
 }
 
-.sentence {
-  width: 1000px;
-  height: 200px;
-  background:rgb(76, 12, 85);
-}
-
-.grid {
+/* .grid {
   display: flex;
   flex-direction: column;
   width: 500px;
   margin: 0 auto;
   flex-wrap: wrap;
-}
+} */
 
 .gridRow {
   display: flex;
@@ -55,13 +49,19 @@ header {
 }
 
 .gridCell {
-  height: 30px;
+  height: 70px;
+  width: 35px;
   flex-grow: 1;
   background: gray;
   box-sizing: border-box;
   border: 2px solid white;
+}
 
-
+.sentence {
+  width: 1000px;
+  height: 200px;
+  background:rgb(76, 12, 85);
+}
 
 
 
