@@ -1,15 +1,13 @@
-var passwords = [
+var password = [
   "dzik jest dziki",
   "be happy",
-  "fronend",
+  "frontend",
   "u mnie działa"
 ];
 
-var password = passwords[Math.floor(Math.random() * passwords.length)];
+password = password.toUpperCase();
 
-var answers = [];
-for (i = 0; i < password.length; i++) {
-  answers[i] = "_";
-};
+var length = password.length;
+var howManyMistakes = 0;
 
-var restCharacters = password.length;
+var password1 = "";
