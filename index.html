@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Worm</title>
+    <title>Train</title>
 </head>
 <body>
     <canvas id="board" width="400" height="400"></canvas>
@@ -15,6 +15,21 @@
         var context = board.getContext("2d");
         var width = board.width;
         var height = board.height;
+
+        var boxSize = 10;
+        var boxWidth = width / boxSize;
+        var boxHeigth = height / boxSize;
+
+        var score = 0;
+
+        var drawBorder = function () {
+            context.fillStyle = "black";
+            context.fillRect(0, 0, width, boxSize);
+            context.fillRect(0, height - boxSize, width, boxSize);
+            context.fillRect(0, 0, boxSize, width);
+            context.fillRect(width - boxSize, 0, boxSize, height);
+        };
+
 
 
     </script>
