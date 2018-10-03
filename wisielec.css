@@ -3,14 +3,40 @@ body {
   color: white;
 }
 
+header {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
 .container {
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
   background: pink;
-  display:flex;
+}
+
+.board {
+  width: 1000px;
+  background: black;
+  display: flex;
 }
 
 .gallows {
-justify-content: flex-end;
+  width: 500px;
+  height: 500px;
+  background: blue;
+}
+
+.letters {
+  width: 500px;
+  height: 500px;
+  background:yellow;
+}
+
+.password {
+  width: 1000px;
+  height: 200px;
+  background:rgb(76, 12, 85);
 }
