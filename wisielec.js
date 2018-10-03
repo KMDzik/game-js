@@ -1,8 +1,8 @@
 var passwords = [
-  "dzik",
-  "happy",
-  "developerem",
-  "działa"
+  "dzik jest dziki",
+  "be happy",
+  "fronend",
+  "u mnie działa"
 ];
 
 var password = passwords[Math.floor(Math.random() * passwords.length)];

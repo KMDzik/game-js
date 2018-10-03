@@ -29,13 +29,13 @@ header {
   background: blue;
 }
 
-.letters {
+.user-field {
   width: 500px;
   height: 500px;
   background:yellow;
 }
 
-.password {
+.sentence {
   width: 1000px;
   height: 200px;
   background:rgb(76, 12, 85);
