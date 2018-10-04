@@ -121,4 +121,23 @@
     }
   };
 
-  
+
+  Train.prototype.crash = function (Front) {
+    var leftCrash = (Front.colum === 0);
+    var topCrash = (Front.row === 0);
+    var rightCrash = (Front.colum === boxWidth - 1);
+    var downCrash = (Front.row === boxHeigth - 1);
+   
+    var wallCrash = leftCrash || topCrash ||
+  rightCrash || downCrash;
+   
+    var lastWagonCrash = false;
+   
+    for (var i = 0; i < this.segments.length; i++) {
+      if (Front.compare(this.segments[i])) {
+        lastWagonCrash = true;
+      }
+    }
+   
+    return wallCrash || lastWagonCrash;
+  };
