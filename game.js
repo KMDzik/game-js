@@ -45,27 +45,37 @@
           }
         };
 
-        var block = function (colum, row) {
+        var Block = function (colum, row) {
           this.colum = colum;
           this.row = row;
         };
 
-        block.prototype.drawSquare = function (color) {
+        Block.prototype.drawSquare = function (color) {
           var x = this.colum * boxSize;
-          var y = this.wiersz * boxSize;
+          var y = this.row * boxSize;
           context.fillStyle = color;
           context.fillRect(x, y, boxSize, boxSize);
         };
 
-        block.prototype.drawCircle = function (color) {
+        Block.prototype.drawCircle = function (color) {
           var middleX = this.colum * boxSize + boxSize / 2;
-          var middleY = this.wiersz * boxSize + boxSize / 2;
+          var middleY = this.row * boxSize + boxSize / 2;
           context.fillStyle = color;
           circle(middleX, middleY, boxSize / 2, true);
         };
 
+        Block.prototype.compare = function (otherBlock) {
+          return this.colum === otherBlock.colum && this.row === otherBlock.row;
+        };
 
-          
-
-
-
+        
+          // Creating train
+        var train = function () {
+        this.segments = [
+        new Blocks(7, 5),
+        new Blocks(6, 5),
+        new Blocks(5, 5)
+        ];
+        this.direction = "right";
+        this.nextDirection = "right";
+      };
