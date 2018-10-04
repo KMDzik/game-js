@@ -35,6 +35,16 @@
           context.fillText("Game Over", width / 2, height / 2);
         };
 
+        var circle = function (x, y, radius, fillCircle) {
+          context.beginPath();
+          context.arc(x, y, radius, 0, Math.PI * 2, false);
+          if (fillCircle) {
+            context.fill();
+          } else {
+            context.stroke();
+          }
+        };
+
 
           
 
