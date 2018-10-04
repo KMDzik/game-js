@@ -23,8 +23,19 @@
           context.fillStyle = "red";
           context.textAlign = "left";
           context.textBaseline = "top";
-          context.fillText("Wynik: " + wynik, rozmiarBloku, rozmiarBloku);
+          context.fillText("SCORE: " + score, boxSize, boxSize);
         };
+
+        var gameOver = function () {
+          clearInterval(timeId);
+          context.font = "60px Comic Sans MS";
+          context.fillStyle = "red";
+          context.textAlign = "center";
+          context.textBaseline = "middle";
+          context.fillText("Game Over", width / 2, height / 2);
+        };
+
+
           
 
 
