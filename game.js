@@ -69,13 +69,56 @@
         };
 
         
-          // Creating train
-        var train = function () {
+          // Creating Train
+        var Train = function () {
         this.segments = [
-        new Blocks(7, 5),
-        new Blocks(6, 5),
-        new Blocks(5, 5)
+        new Block(7, 5),
+        new Block(6, 5),
+        new Block(5, 5)
         ];
+
         this.direction = "right";
         this.nextDirection = "right";
       };
+
+
+      Train.prototype.draw = function () {
+        for (var i = 0; i < this.segments.length; i++) {
+          this.segments[i].drawSquare ("Red");
+        }
+      };
+
+       
+       
+      Train.prototype.move = function () {
+        var front = this.segments[0];
+        var newFront;
+       
+        this.direction = this.nextDirection;
+       
+
+    if (this.direction === "right") {
+      newFront = new Block(front.colum + 1, front.row);
+    } else if (this.direction === "down") {
+      newFront = new Block(front.colum, front.row + 1);
+    } else if (this.direction === "left") {
+      newFront = new Block(front.colum - 1, front.row);
+    } else if (this.direction === "up") {
+      newFront = new Block(front.colum, front.row - 1);
+    }
+    if (this.crash(newFront)) {
+      gameOver();
+      return;
+    }
+
+    this.segments.unshift(newFront);
+   
+    if (newFront.compare(wagon.pozycja)) {
+      wynik ++;
+      wagon.bring();
+    } else {
+      this.segments.pop();
+    }
+  };
+
+  
