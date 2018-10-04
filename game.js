@@ -45,6 +45,25 @@
           }
         };
 
+        var block = function (colum, row) {
+          this.colum = colum;
+          this.row = row;
+        };
+
+        block.prototype.drawSquare = function (color) {
+          var x = this.colum * boxSize;
+          var y = this.wiersz * boxSize;
+          context.fillStyle = color;
+          context.fillRect(x, y, boxSize, boxSize);
+        };
+
+        block.prototype.drawCircle = function (color) {
+          var middleX = this.colum * boxSize + boxSize / 2;
+          var middleY = this.wiersz * boxSize + boxSize / 2;
+          context.fillStyle = color;
+          circle(middleX, middleY, boxSize / 2, true);
+        };
+
 
           
 
