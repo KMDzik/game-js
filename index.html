@@ -25,7 +25,7 @@
 
         #board {
 
-            background: rgb(199, 190, 190)
+            background:rgb(116, 186, 230);
         }
 
         .instruction {
@@ -34,7 +34,17 @@
             height: 200px;
             align-self: flex-end;
             margin-top: 400px;
-            margin-left: 400px;
+            margin-left: 450px;
+            color: white;
+            border: solid 10px red;
+        }
+
+        header {
+            color: red;
+            font: 30px Comic Sans MS;
+            text-align: center;
+            padding-top: 20px;
+            letter-spacing: 3px;
         }
 
     </style>
@@ -47,7 +57,9 @@
     <div id="train">
         <canvas id="board" width="400" height="400"></canvas>
     </div>
-    <div class="instruction"></div>
+    <div class="instruction">
+        <header> POCIAG</header>
+    </div>
 
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script src="game.js"></script>
