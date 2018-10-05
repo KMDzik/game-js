@@ -11,7 +11,7 @@ var boxHeigth = height / boxSize;
 var score = 0;
 
 var drawBorder = function () {
-  context.fillStyle = "gray";
+  context.fillStyle = "#cc0000";
   context.fillRect(0, 0, width, boxSize);
   context.fillRect(0, height - boxSize, width, boxSize);
   context.fillRect(0, 0, boxSize, width);
@@ -20,7 +20,7 @@ var drawBorder = function () {
 
 var drawScore = function () {
   context.font = "24px Comic Sans MS";
-  context.fillStyle = "red";
+  context.fillStyle = "black";
   context.textAlign = "left";
   context.textBaseline = "top";
   context.fillText("SCORE: " + score, boxSize, boxSize);
@@ -29,7 +29,7 @@ var drawScore = function () {
 var gameOver = function () {
   clearInterval(timeId);
   context.font = "60px Comic Sans MS";
-  context.fillStyle = "red";
+  context.fillStyle = "#e60000";
   context.textAlign = "center";
   context.textBaseline = "middle";
   context.fillText("Game Over", width / 2, height / 2);
@@ -84,7 +84,7 @@ var Train = function () {
 
 Train.prototype.draw = function () {
   for (var i = 0; i < this.segments.length; i++) {
-    this.segments[i].drawSquare("Red");
+    this.segments[i].drawSquare("#0000cc");
   }
 };
 
@@ -164,7 +164,7 @@ var Wagon = function () {
 
 
 Wagon.prototype.draw = function () {
-  this.position.drawCircle("LimeGreen");
+  this.position.drawCircle("brown");
 };
 
 
